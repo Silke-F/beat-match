@@ -1,0 +1,478 @@
+/* --- GENERAL --- */
+body {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    height: 100%;
+    background: #EFECE5;
+}
+
+.error {
+    background: red;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}
+
+.headline {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    padding: 12px 20px;
+    margin: 8px 15px 0 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    min-width: 100px;
+    background-color: #41998F;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #652c84;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.center-margin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* --- App --- */
+#app, #welcome {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    width: 100%;
+    background: #FFF9E9;
+    height: 100vh;
+    overflow: auto;
+    background-image: url("/static/pics/2864.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#welcome-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#route-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #FFF9E9;
+    opacity: 0.95;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;    
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 40px;
+    margin-top: -90px;
+    margin-bottom: 60px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* --- ProfilePic --- */
+#profile-pic-small img {
+    border-radius: 200px;
+    padding: 20px;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    float: right;
+    margin-right: 30px;
+}
+
+#login-logo  {
+    float: left;
+    max-width: 200px;
+    max-height: 300px;
+}
+
+.profile-pic-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#profile-pic-big img {
+    border: 3px solid #652c84;
+    border-radius: 50px;
+    max-width: 300px;
+    max-height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#other-users-pic img {
+    border: 3px solid #652c84;
+    border-radius: 50px;
+    max-width: 300px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+#word-wrap {
+    max-width: 700px;
+}
+
+
+/* --- Uploader --- */
+#pic-uploader {
+    position: fixed;  
+    overflow-y: scroll;
+    overflow-x: hidden;    
+    left: 50%;
+    transform: translate(-50%, -30%);  
+    top: 30%;
+    height: 150px;
+    width: 400px;
+    background: rgba(55, 63, 66, 0.95);
+    color: white;
+    padding: 20px;
+    z-index: 99;
+}
+
+#close-popup {
+    position: fixed;
+    left: 63%;
+    transform: translate(-63%, 0);
+    top: 25%;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100;
+    color: white;
+}
+
+/* --- Profile --- */
+#profile, #other-users-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#profile div, #other-users-profile div {
+    margin-bottom: 20px;
+}
+
+#profile-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: white;
+    opacity: 0.95;
+    padding: 20px;
+    padding-top: 40px;
+}
+
+/* --- BioEditor --- */
+textarea {
+    padding: 12px 20px;
+    margin: 8px 15px 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+#edit-bio {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- FindUsers --- */
+/* #find-users, #friends { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 450px));
+    grid-gap: 1rem;
+    justify-content: center;
+} */
+     
+.box {
+    border: 2px solid grey;
+    border-radius: 4px; 
+    padding: .5rem .2rem .5rem .8rem;
+    margin-bottom: 30px;   
+    justify-self: center;
+}
+
+.box img {
+    width: 200px;
+    height: 200px;
+    padding: .5rem;
+    object-fit: cover;
+    align-items: center;
+}
+
+
+/* --- Chat --- */
+#chat {
+    width: 500px;
+}
+
+#chat-placeholder {
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+#messages {
+    height: 50vh;
+    overflow: scroll;
+    padding: 20px;
+    border: 2px solid #652c84;
+    border-radius: 4px; 
+    height: 470px;
+    background: white;
+    opacity: 0.8;
+}
+
+#message {
+    margin-top: 5px;
+}
+
+#chat-form input {
+    width: 300px;
+    border: 1px solid #652c84;
+}
+
+/* --- Login --- */
+#login {
+    margin-top: 150px;
+}
+
+#login-button {
+    width: 400px;
+    background-color: #41998F;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #652c84;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* --- Login --- */
+#reset-password {
+    margin-top: 150px;
+}
+
+
+/* --- Register --- */
+#registration-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+}
+
+#registration-input input, #login input {
+    width: 400px;
+}
+
+#registration-input img {
+    width: 400px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+#register-button {
+    width: 400px;
+    background-color: #41998F;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #652c84;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#logo {
+    margin-top: 30px;
+}
+
+#wave-left img {
+    animation: pulse 1500ms infinite linear;
+    height: 300px;
+    opacity: 0.7;
+}
+
+#wave-right img {
+    animation: pulse 1500ms infinite linear;
+    height: 300px;
+    opacity: 0.7;
+}
+
+@keyframes pulse {
+    0%{
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* --- My Favorite Artists --- */
+#favorites, #friends-box, #artists, #users {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.box-favs, .box-friends, .box-artists, .box-users {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #652c84;
+    background: white;
+    opacity: 0.9;
+    border-radius: 4px; 
+    padding: .5rem 1.5rem .5rem 1.5rem;
+    margin-bottom: 30px;   
+    width: 300px;
+}
+
+.box-favs img, .box-friends img, .box-artists  img, .box-users img, .box-matches img {
+    width: 200px;
+    height: 200px;
+    padding: .5rem;
+    object-fit: cover;
+    align-items: center;
+}
+
+/* --- Find Artists --- */
+#artists-input, #user-input {
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.delete-button {
+    background: #da4885;
+}
+
+/* --- Music Matches --- */
+#match-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#preview-match-pic {
+    border-radius: 200px;
+    border: 3px solid #652c84;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#preview-match-pic:hover {
+    border: 3px solid #da4885;
+}
+
+#match-name a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#match-name:hover a {
+    color: #da4885;
+}
+
+#match {
+    width: 50%;
+    margin: -30px;
+}
+
+#favorit-artists {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+}
+
+.box-matches {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #652c84;
+    background: white;
+    opacity: 0.9;
+    border-radius: 4px; 
+    padding: 1rem .5rem 1rem .5rem;
+    margin-bottom: 30px;   
+    width: 500px;
+}
+
+#matches-logo {
+    margin-bottom: 30px;
+}
